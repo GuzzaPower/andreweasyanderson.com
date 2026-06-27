@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "andreweasyandereson.com",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["-y", "serve", "."],
+      "port": 3456,
+      "autoPort": true
+    }
+  ]
+}
