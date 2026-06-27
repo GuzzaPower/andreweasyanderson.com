@@ -564,6 +564,84 @@ a:hover { color: var(--blue-mid); }
   border-color: var(--white);
 }
 
+/* ---------- What I Build — machine components ---------- */
+.machine-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin-top: 16px;
+}
+.machine-card {
+  position: relative;
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 32px 30px;
+  transition: transform 0.22s var(--ease), box-shadow 0.22s var(--ease),
+              border-color 0.22s var(--ease);
+}
+.machine-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--blue);
+  box-shadow: 0 20px 44px -22px rgba(11, 31, 58, 0.35);
+}
+.machine-card--wide { grid-column: 1 / -1; }
+.machine-card--wide .machine-name,
+.machine-card--wide .machine-desc,
+.machine-card--wide .machine-proof { max-width: 62ch; }
+
+/* large faded number watermark — decorative */
+.machine-num {
+  position: absolute;
+  top: -14px;
+  right: 10px;
+  font-family: var(--font-display);
+  font-size: clamp(86px, 11vw, 124px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: rgba(0, 95, 53, 0.09);
+  pointer-events: none;
+  z-index: 0;
+}
+/* keep real content above the watermark */
+.machine-card > :not(.machine-num) { position: relative; z-index: 1; }
+
+.machine-kicker {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--green-dark);          /* #005F35 — 9.9:1 on white */
+  margin-bottom: 12px;
+}
+.machine-name {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+.machine-desc {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--slate);
+  margin-bottom: 18px;
+}
+.machine-proof {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.55;
+  color: var(--navy);                /* navy on green tint — ~15:1 */
+  background: var(--green-xlight);
+  border-left: 3px solid var(--green-dark);
+  border-radius: 0 10px 10px 0;
+  padding: 14px 18px;
+}
+
 /* Portrait */
 .hero-portrait { position: relative; justify-self: center; max-width: 420px; width: 100%; }
 .hero-portrait img {
@@ -1147,6 +1225,7 @@ a:hover { color: var(--blue-mid); }
   .home-hero-grid { grid-template-columns: 1fr; gap: 44px; }
   .hero-portrait { order: -1; max-width: 340px; }
   .story-grid { grid-template-columns: 1fr; gap: 44px; }
+  .machine-grid { grid-template-columns: 1fr; }
   .cred-grid { grid-template-columns: 1fr; }
   .book-grid { grid-template-columns: 1fr; }
   .cards { grid-template-columns: 1fr; }
