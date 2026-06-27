@@ -4,9 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Contact — Andrew "Easy" Anderson | iQ Marketers, Nashville TN</title>
-  <meta name="description" content="Get in touch with Andrew &quot;Easy&quot; Anderson and iQ Marketers in Nashville, TN for AEO audits, content hubs, advisory, and speaking." />
+  <title>Contact — Andrew "Easy" Anderson | Build Your Digital Machine</title>
+  <meta name="description" content="Tell Andrew &quot;Easy&quot; Anderson about your project. Websites, AI integration, custom software, AEO, and complete business automation — built to work together as one system." />
   <link rel="canonical" href="https://andreweasyandereson.com/contact.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://andreweasyandereson.com/contact.html" />
+  <meta property="og:title" content="Contact — Andrew &quot;Easy&quot; Anderson" />
+  <meta property="og:description" content="Tell Andrew about your project. Built to work together as one complete digital machine." />
+  <meta property="og:image" content="https://andreweasyandereson.com/assets/images/andrew-easy-anderson-aeo-pioneer.png" />
+  <meta property="og:image:alt" content="Andrew &quot;Easy&quot; Anderson" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,16 +23,20 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "iQ Marketers",
-    "founder": "Andrew \"Easy\" Anderson",
-    "url": "https://andreweasyandereson.com/",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "15551 Old Hickory Blvd, Suite A",
-      "addressLocality": "Nashville",
-      "addressRegion": "TN",
-      "addressCountry": "US"
+    "@type": "ContactPage",
+    "name": "Contact Andrew \"Easy\" Anderson",
+    "url": "https://andreweasyandereson.com/contact.html",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "iQ Marketers",
+      "founder": "Andrew \"Easy\" Anderson",
+      "url": "https://iqmarketers.com/",
+      "telephone": "+1-615-628-7386",
+      "email": "hello@andreweasyandereson.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "15551 Old Hickory Blvd, Suite A"
+      }
     }
   }
   </script>
@@ -55,38 +66,61 @@
     <section class="page-hero">
       <div class="container">
         <p class="eyebrow">Contact</p>
-        <h1>Let's make you the answer.</h1>
-        <p>Tell me about your brand and what you want AI to say about you. I read every message.</p>
+        <h1>Let's build your machine.</h1>
+        <p>Tell me about your business and what you want it to do. I read every message and reply personally — no junior account manager, no chatbot.</p>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section--flush">
       <div class="container contact-grid">
 
         <!-- Form -->
         <div>
-          <h2 class="section-title">Send a message</h2>
-          <!-- Static site: connect this form to an email endpoint (e.g. Formspree)
-               by setting the action URL below. -->
-          <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+          <h2 class="section-title">Start a conversation</h2>
+          <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+            <!-- Web3Forms config -->
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+            <input type="hidden" name="subject" value="New inquiry from andreweasyandereson.com" />
+            <input type="hidden" name="from_name" value="andreweasyandereson.com" />
+            <!-- Honeypot (hidden from people; catches bots) -->
+            <input type="checkbox" name="botcheck" class="visually-hidden" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
             <div class="field">
-              <label for="name">Name <span class="req" aria-hidden="true">*</span></label>
-              <input type="text" id="name" name="name" autocomplete="name" required />
+              <label for="name">Full Name <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="name" name="Full Name" autocomplete="name" required />
             </div>
             <div class="field">
               <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
-              <input type="email" id="email" name="email" autocomplete="email" required />
+              <input type="email" id="email" name="Email" autocomplete="email" required />
             </div>
             <div class="field">
-              <label for="company">Company</label>
-              <input type="text" id="company" name="company" autocomplete="organization" />
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="Phone" autocomplete="tel" />
             </div>
             <div class="field">
-              <label for="message">How can I help? <span class="req" aria-hidden="true">*</span></label>
-              <textarea id="message" name="message" required></textarea>
+              <label for="company">Company Name</label>
+              <input type="text" id="company" name="Company Name" autocomplete="organization" />
             </div>
+            <div class="field">
+              <label for="budget">Budget Range</label>
+              <select id="budget" name="Budget Range">
+                <option value="">Select a range</option>
+                <option>Under $5K</option>
+                <option>$5K-$10K</option>
+                <option>$10K-$25K</option>
+                <option>$25K-$50K</option>
+                <option>$50K plus</option>
+                <option>Enterprise</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="message">Project Description <span class="req" aria-hidden="true">*</span></label>
+              <textarea id="message" name="Project Description" required></textarea>
+            </div>
+
             <button type="submit" class="btn btn-primary btn-lg">Send message</button>
-            <p class="form-note">Required fields are marked with an asterisk (*). Your details are only used to reply to you.</p>
+            <p class="form-status" role="status" aria-live="polite"></p>
+            <p class="form-note">Required fields are marked with an asterisk (*). Your details are only used to reply to you and are never sold.</p>
           </form>
         </div>
 
@@ -99,14 +133,18 @@
               <dd><a href="mailto:hello@andreweasyandereson.com">hello@andreweasyandereson.com</a></dd>
             </div>
             <div>
-              <dt>iQ Marketers</dt>
-              <dd>15551 Old Hickory Blvd, Suite A<br />Nashville, TN</dd>
+              <dt>Phone</dt>
+              <dd><a href="tel:+16156287386">(615) 628-7386</a></dd>
             </div>
             <div>
-              <dt>Tools</dt>
+              <dt>iQ Marketers</dt>
+              <dd>15551 Old Hickory Blvd, Suite A</dd>
+            </div>
+            <div>
+              <dt>Free tools</dt>
               <dd>
-                <a href="https://aeowebsitechecker.com">AEOWebsiteChecker.com</a><br />
-                <a href="https://iqcookie.com">iQCookie.com</a>
+                <a href="https://aeowebsitechecker.com/">AEOWebsiteChecker.com</a><br />
+                <a href="https://iqcookie.com/">iQCookie.com</a>
               </dd>
             </div>
           </dl>
@@ -117,22 +155,48 @@
 
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <span>&copy; <span id="year">2026</span> Andrew "Easy" Anderson &middot; Nashville, TN</span>
-      <nav class="footer-nav" aria-label="Footer">
-        <a href="work.html">Work</a>
-        <a href="blog/index.html">Blog</a>
-        <a href="contact.html">Contact</a>
-        <a href="accessibility.html">Accessibility</a>
-        <a href="privacy-policy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="cookie-policy.html">Cookies</a>
-      </nav>
-      <span class="footer-tag">Answer Engine Optimization</span>
+  <footer class="site-footer footer-rich">
+    <div class="container">
+      <div class="footer-cols">
+        <div class="footer-brand">
+          <p class="footer-logo">Andrew "Easy" Anderson</p>
+          <p>Building the complete digital machine since 1988.</p>
+          <p>iQ Marketers &middot; 15551 Old Hickory Blvd, Suite A</p>
+          <p><a href="tel:+16156287386">(615) 628-7386</a></p>
+        </div>
+        <nav class="footer-col" aria-label="Site">
+          <h2>Navigation</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="blog/index.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-col" aria-label="Properties">
+          <h2>Properties</h2>
+          <ul>
+            <li><a href="https://aeowebsitechecker.com/">AEOWebsiteChecker.com</a></li>
+            <li><a href="https://iqcookie.com/">iQCookie.com</a></li>
+            <li><a href="https://iqmarketers.com/">iQ Marketers</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-col" aria-label="Legal">
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+            <li><a href="cookie-policy.html">Cookie Policy</a></li>
+            <li><a href="accessibility.html">Accessibility</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year">2026</span> Andrew Anderson / iQ Marketers. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

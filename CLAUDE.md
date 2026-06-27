@@ -11,7 +11,7 @@ Reference sites for design/tone: chrismatthews.co.uk and kasimaslam.com
 - Color scheme: greens and blues. Primary dark: #0B1F3A (navy). 
   Accent green: #00B96B. Text green: #005F35. Link blue: #1A5E99.
 - NO italics anywhere — not in CSS, not in HTML, not in copy
-- Minimum font size: 16px everywhere, no exceptions
+- Minimum font size: 18px everywhere, no exceptions
 - WCAG 2.2 AA compliant — all text must pass contrast ratios
 - Fonts: Space Grotesk (headings), DM Sans (body) — load from Google Fonts
 - Shared stylesheet: assets/css/style.css — used by all pages
