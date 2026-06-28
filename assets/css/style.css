@@ -1127,6 +1127,51 @@ a:hover { color: var(--blue-mid); }
   .blog-grid { grid-template-columns: 1fr; }
 }
 
+/* ---------- FAQ page ---------- */
+.faq-list { max-width: 760px; margin-inline: auto; }
+.faq-item {
+  padding: 2rem 0;
+  border-top: 1px solid var(--line);
+}
+.faq-item:first-child { border-top: 0; padding-top: 0; }
+.faq-item h2 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;            /* ~22.4px */
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--navy);
+  margin-bottom: 0.6rem;
+}
+.faq-item p {
+  font-size: 1.175rem;          /* 18.8px */
+  line-height: 1.75;
+  color: var(--slate);
+  margin: 0;
+}
+.faq-cta {
+  max-width: 760px;
+  margin: 4rem auto 0;
+  padding: 2.5rem;
+  background: linear-gradient(140deg, rgba(0, 185, 107, 0.10) 0%, rgba(26, 94, 153, 0.08) 100%);
+  border: 1px solid rgba(0, 185, 107, 0.30);
+  border-radius: 14px;
+  text-align: center;
+}
+.faq-cta h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;            /* 24px */
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.75rem;
+}
+.faq-cta p {
+  font-size: 18px;
+  color: var(--slate);
+  line-height: 1.65;
+  margin: 0 auto 1.5rem;
+  max-width: 520px;
+}
+
 /* ---------- Article meta ---------- */
 .post-meta {
   display: flex;
