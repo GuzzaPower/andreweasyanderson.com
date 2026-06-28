@@ -1178,6 +1178,134 @@ a:hover { color: var(--blue-mid); }
   max-width: 520px;
 }
 
+/* ==========================================================
+   AUTHOR PAGE
+   ========================================================== */
+.author-page { max-width: 860px; margin-inline: auto; }
+.author-section + .author-section { margin-top: 3.5rem; }
+.author-section-heading {
+  font-family: var(--font-display);
+  font-size: 1.6rem;            /* ~25.6px */
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--navy);
+  margin-bottom: 1rem;
+}
+
+/* ---------- Author hero ---------- */
+.author-hero {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--line);
+}
+.author-hero-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid var(--line);
+}
+.author-hero-eyebrow {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--green-dark);     /* 7.81:1 on white */
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.author-hero-name {
+  font-family: var(--font-display);
+  font-size: 2.25rem;           /* 36px */
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.author-hero-title {
+  font-size: 1.175rem;          /* 18.8px */
+  color: var(--slate);
+  margin-bottom: 1.25rem;
+}
+.author-hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.author-hero-links a {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--green-dark);     /* 7.81:1 on white */
+  text-decoration: none;
+  border: 1px solid rgba(0, 95, 53, 0.35);
+  padding: 7px 16px;
+  border-radius: 100px;
+  transition: background 0.18s var(--ease), border-color 0.18s var(--ease);
+}
+.author-hero-links a:hover {
+  background: var(--green-xlight);
+  border-color: var(--green-dark);
+}
+@media (max-width: 540px) {
+  .author-hero { flex-direction: column; text-align: center; }
+  .author-hero-links { justify-content: center; }
+}
+
+/* ---------- Areas of expertise ---------- */
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+.expertise-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: border-color 0.2s var(--ease), box-shadow 0.2s var(--ease);
+}
+.expertise-card:hover {
+  border-color: var(--green-dark);
+  box-shadow: 0 12px 28px -20px rgba(11, 31, 58, 0.35);
+}
+.expertise-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 11px;
+  background: var(--green-light);
+  margin-bottom: 14px;
+}
+.expertise-icon svg { width: 22px; height: 22px; color: var(--green-dark); }
+.expertise-card-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;           /* 18.4px */
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.expertise-card-desc {
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--slate);
+}
+
+/* ---------- Published articles (single featured card) ---------- */
+.author-articles .blog-card { max-width: 460px; }
+
+/* ---------- Author links in byline + bio ---------- */
+.post-meta a { color: var(--blue); }
+.author-bio .author-name a { color: inherit; text-decoration: none; }
+.author-bio .author-name a:hover { text-decoration: underline; }
+
 /* ---------- Article meta ---------- */
 .post-meta {
   display: flex;
