@@ -4,7 +4,7 @@
 Personal brand and authority site for Andrew "Easy" Anderson.
 Stack: Static HTML/CSS/JS only. No frameworks, no build tools, no CMS.
 Hosting: Cloudflare Pages — auto-deploys on push to GitHub.
-Repo: github.com/GuzzaPower/andreweasyandereson.com
+Repo: github.com/GuzzaPower/andreweasyanderson.com
 Reference sites for design/tone: chrismatthews.co.uk and kasimaslam.com
 
 ## Design Rules — Non-Negotiable
